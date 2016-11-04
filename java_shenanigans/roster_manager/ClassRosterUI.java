@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ClassRosterUI {
 
-	static void print_menu() {
+	static void printMenu() {
 		System.out.println("----------\nac: Add Course\ndc: Drop Course\nas: Add Student\nds: Drop Student\n p: Print ClassRoster\n q: Quit Program\n----------");
 	}
 	// commands are:
@@ -12,7 +12,7 @@ public class ClassRosterUI {
 	// ds : drop student
 	// p  : print class roster
 	// q  : quit program
-	static String get_command() {
+	static String getCommand() {
 		String command;
 		while (true) {
 			Scanner sca = new Scanner(System.in);
@@ -29,35 +29,40 @@ public class ClassRosterUI {
 		return command;
 	}
 
-	static String get_course_code() {
+	// promp,ts user for course code
+	static String getCourseCode() {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter course code: ");
 		String cc = s.nextLine();
 		return cc;
 	}
 
-	static String get_course_name() {
+	// prompts user for course name
+	static String getCourseName() {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter course name: ");
 		String cn = s.nextLine();
 		return cn;
 	}
 
-	static String get_first_name() {
+	// prompts user for first name
+	static String getFirstName() {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter first name: ");
 		String fn = s.nextLine();
 		return fn;
 	}
 
-	static String get_last_name() {
+	// prompts user for last name
+	static String getLastName() {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter last name: ");
 		String ln = s.nextLine();
 		return ln;
 	}
 
-	static int get_student_id() {
+	// prompts user for student ID. will make sure that the ID is an int
+	static int getStudentID() {
 		while(true) {
 			try {
 				Scanner s = new Scanner(System.in);
@@ -71,8 +76,4 @@ public class ClassRosterUI {
 		}
 	}
 
-
-	public static void main(String[] args) {
-		ClassRosterUI.get_command();
-	}
 }
